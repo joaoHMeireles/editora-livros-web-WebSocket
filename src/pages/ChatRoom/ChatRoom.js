@@ -27,6 +27,18 @@ export const ChatRoom = () => {
         carregar();
     }, []);
 
+    useEffect(() => {
+        const novaMenssagem = (response) => {
+            const mensagemRecebida = JSON.parse(response.data)
+            console.log("Mensagem recebida:")
+            setMensagens([...mensagens, mensagemRecebida])
+        }
+        
+        if(){
+            inscrever(`/livro/${isbn}/chat`, novaMenssagem)
+        }
+    }, [mensagens])
+
     const setDefaultMensagem = () => {
         const userCookie = Cookies.get('user');
         const userDecode = decodeURIComponent(userCookie);
