@@ -34,9 +34,9 @@ export const ChatRoom = () => {
             setMensagens([...mensagens, mensagemRecebida])
         }
         
-        if(){
-            inscrever(`/livro/${isbn}/chat`, novaMenssagem)
-        }
+        // if(){
+        //     inscrever(`/livro/${isbn}/chat`, novaMenssagem)
+        // }
     }, [mensagens])
 
     const setDefaultMensagem = () => {
